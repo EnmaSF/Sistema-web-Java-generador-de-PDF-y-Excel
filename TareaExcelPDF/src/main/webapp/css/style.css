@@ -1,0 +1,304 @@
+:root {
+    --nintendo-red: #E60012;
+    --nintendo-red-dark: #b3000e;
+    --dark-bg: #2c2c2c;
+    --light-bg: #f5f5f5;
+    --white: #ffffff;
+    --text-color: #484848;
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+    --shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.main-header {
+    background-color: var(--nintendo-red);
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.header-left, .logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 50px;
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.company-name, .empresa-nombre {
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+footer, .main-footer {
+    text-align: center;
+    padding: 30px;
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 50px;
+}
+
+.btn, button, .btn-logout, .btn-save, .btn-edit, .btn-delete, .btn-login, .btn-back {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px; 
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.btn-back {
+    background-color: #2d3436 !important; 
+    color: white !important;
+    border: 2px solid #2d3436;
+}
+
+.btn-back:hover {
+    background-color: #000000 !important;
+    border-color: #000000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.btn:hover, button:hover, a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn:active, button:active {
+    transform: translateY(0);
+}
+
+.btn-logout { background: white; color: var(--nintendo-red); }
+.btn-logout:hover { background: #eee; }
+
+.btn-save, .btn-primary { background: var(--nintendo-red); color: white; }
+.btn-save:hover { background: var(--nintendo-red-dark); }
+
+.btn-edit { background: #007bff; color: white; margin-right: 5px; }
+.btn-delete { background: #dc3545; color: white; }
+.btn-edit, .btn-delete {
+    margin: 0; 
+    padding: 8px 16px; 
+    font-size: 0.85rem;
+    min-width: 90px;
+}
+
+.btn-pdf { background: #e74c3c; color: white; margin: 0 10px; }
+.btn-excel { background: #27ae60; color: white; }
+
+.login-body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, var(--nintendo-red) 0%, var(--nintendo-red-dark) 100%);
+}
+
+.login-body > div {
+    background: white;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.login-logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input, .input-modal {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus, .input-modal:focus {
+    border-color: var(--nintendo-red);
+}
+
+.btn-login {
+    width: 100%;
+    background: var(--nintendo-red);
+    color: white;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.error-msg {
+    color: #e60012;
+    background: #ffe6e6;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.listado-section, .table-clientes {
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 3px solid var(--nintendo-red);
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+td:last-child {
+    display: flex;
+    gap: 10px; 
+    justify-content: flex-start;
+    align-items: center;
+    white-space: nowrap; 
+}
+
+tr:hover {
+    background-color: #fff9f9;
+}
+
+.welcome-card {
+    padding: 20px;
+    border-left: 5px solid var(--nintendo-red);
+    background: #fdfdfd;
+    margin-bottom: 30px;
+}
+
+.actions-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.actions-bar .btn-primary {
+    margin-right: auto; 
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.modal-overlay {
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-window {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header {
+    background: var(--nintendo-red);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-body { padding: 25px; }
+
+.form-group { margin-bottom: 15px; }
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.modal-footer {
+    padding: 20px;
+    background: #f9f9f9;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn-cancel { background: #ccc; color: #333; }
+.btn-close-x {
+    background: transparent;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0;
+    width: auto;
+}
